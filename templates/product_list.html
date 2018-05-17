@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-2">
+            <h2>Список товаров</h2>
+        </div>
+    </div>
+    <div class="row">
+        {% for product in product_list.items %}
+            {% include 'blocks/product_cell.html' %}
+        {% endfor %}
+
+    </div>
+    <div class="row">
+        <div>
+        {% if product_list.has_prev %}<a href="{{ root_path }}{{ url_for('product_list', page=product_list.prev_num, category=category_id) }}">&lt;&lt; Previous</a>{% else %}{% endif %}
+            {% if product_list.has_prev and product_list.has_next %} | {% endif %}
+        {% if product_list.has_next %}<a href="{{ root_path }}{{ url_for('product_list', page=product_list.next_num, category=category_id) }}">Next &gt;&gt;</a>{% else %}{% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+          <h2>Категории</h2>
+        <ul>
+            {% for category in categories %}
+                <li><a href="{{ url_for('product_list', category=category.id) }}">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
+        </div>
+  </div>
+
+{% endblock %}

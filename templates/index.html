@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md">
+    <h2>5 каких-то товаров</h2>
+    {% for product in best_products %}
+        {% include 'blocks/product_cell.html' %}
+    {% endfor %}
+    <br>
+    <br>
+    <br>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md">
+      <h2>Категории</h2>
+    <ul>
+    {% for category in categories %}
+        <li><a href="{{ url_for('product_list', category=category.id) }}">{{ category.name }}</a></li>
+    {% endfor %}
+    </ul>
+    </div>
+  </div>
+{% endblock %}

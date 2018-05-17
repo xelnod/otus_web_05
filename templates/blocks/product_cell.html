@@ -1,0 +1,12 @@
+
+<div class="col-md-2 product-cell" style="display: inline-block">
+        <a href="{{ url_for('product_detail', product_id=product.id) }}">
+        <div class="image-holder">
+            <img class="product-img" src="{{ product.image_url }}"/>
+        </div>
+        <div class="price-holder">
+            <h4>{{ product.price_kopeck | display_price }} ₽</h4>
+        </div>
+            {{ product.name }}
+        </a>
+</div>

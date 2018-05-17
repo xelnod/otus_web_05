@@ -1,0 +1,36 @@
+.product-img {
+    height: auto;
+    width: auto;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.product-img-big {
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.container-fluid {
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.row {
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.main-title {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.main-title-holder {
+    text-align: center;
+}
+
+.product-cell {
+    margin-left: 20px
+}
