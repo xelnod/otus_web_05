@@ -37,6 +37,11 @@ $ pip install -r requirements.txt
 $ flask run
 ```
 
+## Features
+- Product categories
+- Product List (including pagination and category filters)
+- Product detail page
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
