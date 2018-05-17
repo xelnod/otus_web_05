@@ -48,10 +48,10 @@ $ flask shell
 >>> db.session.commit()
 >>> p = Product(
     name='iPad Pro', 
-    description='This is an iPadPro\n It's very cool!',
+    description='This is an iPadPro\n It\'s very cool!',
     image_url='https://assets.logitech.com/assets/65413/base-pdp-refresh.png',
     price_kopeck=10050000,
-    categories=[pc,]
+    categories=[pc,])
 >>> db.session.add(p)
 >>> db.session.commit()
 ```
